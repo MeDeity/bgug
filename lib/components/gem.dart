@@ -8,7 +8,7 @@ import 'package:flame/sprite.dart';
 import '../audio.dart';
 import '../constants.dart';
 import '../mixins/has_game_ref.dart';
-
+///关于奖励钻石
 class GemJuiceEngine {
   static const MAX_TIME = 1;
 

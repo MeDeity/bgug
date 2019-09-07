@@ -4,7 +4,7 @@ import 'package:flame/components/component.dart';
 import 'package:flame/sprite.dart';
 
 import '../tutorial_status.dart';
-
+///教程View
 class Tutorial extends PositionComponent {
   static const FRAC = 192.0 / 162.0;
 
