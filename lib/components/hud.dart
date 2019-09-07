@@ -11,7 +11,7 @@ import '../data.dart';
 import '../util.dart';
 import '../constants.dart';
 import '../mixins/has_game_ref.dart';
-
+///仪表盘
 class Hud extends SpriteComponent with HasGameRef, Resizable {
   static const SRC_WIDTH = 220.0;
   static const SRC_HEIGHT = 32.0;
@@ -31,7 +31,7 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
   double meterPerPixel = 1.0;
   double maxDistance = 0.0;
 
-  double get maxDistanceInMeters => maxDistance * this.meterPerPixel;
+  double get maxDistanceInMeters => maxDistance * this.meterPerPixel;//最大距离
 
   Hud() : super.fromSprite(WIDTH, HEIGHT, new Sprite('hud_bg.png', width: SRC_WIDTH, height: SRC_HEIGHT));
 
@@ -59,7 +59,7 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
   }
 
   @override
-  void render(Canvas canvas) {
+  void render(Canvas canvas) {//渲染仪表盘
     if (bgRect != null) {
       canvas.drawRect(bgRect, bgPaint);
 
@@ -90,7 +90,7 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
     this.clock = null;
   }
 
-  void renderDistance(Canvas canvas) {
+  void renderDistance(Canvas canvas) {//渲染距离
     const XI = SCALE * 78.0;
     const XF = SCALE * 123.0;
     const SIZE = XF - XI;
@@ -104,19 +104,19 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
     defaultText.render(canvas, '$dist m', where, anchor: Anchor.topCenter);
   }
 
-  void renderGems(Canvas canvas) {
+  void renderGems(Canvas canvas) {//渲染Gem的数量
     defaultText.render(canvas, gameRef.gems.toString(), _gemPosition);
   }
 
-  void renderCoins(Canvas canvas) {
+  void renderCoins(Canvas canvas) {//渲染Coin的数量
     defaultText.render(canvas, gameRef.currentCoins.toString(), _coinPosition);
   }
 
-  Position getActualCoinPosition() {
+  Position getActualCoinPosition() {//获取coin的实际位置
     return toPosition().add(_coinPosition);
   }
 
-  void renderGauge(Canvas canvas) {
+  void renderGauge(Canvas canvas) {//渲染力道 动态
     if (gaugeStrength == null) {
       return;
     }

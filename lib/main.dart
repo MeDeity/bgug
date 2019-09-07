@@ -21,6 +21,7 @@ class Main {
   static BgugGame game;
 }
 
+///处理游戏暂停及恢复
 class _Handler extends WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
