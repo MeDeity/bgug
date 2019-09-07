@@ -38,7 +38,7 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
   Position get gemPosition => new Position(x + SCALE * 141, y + SCALE * 7);
 
   @override
-  void update(double t) {
+  void update(double t) {//状态更新
     super.update(t);
     if (clock != null) {
       clock += t;
@@ -51,7 +51,7 @@ class Hud extends SpriteComponent with HasGameRef, Resizable {
   }
 
   @override
-  void resize(Size size) {
+  void resize(Size size) {//当屏幕发生变化的情况下需要进行数据上的调整
     this.x = (size.width - WIDTH) / 2;
     this.y = 4.0;
     this.bgRect = new Rect.fromLTWH(0.0, 0.0, size.width, HEIGHT);
