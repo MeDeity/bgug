@@ -11,7 +11,7 @@ import 'game.dart';
 import 'play_user.dart';
 
 part 'stats.g.dart';
-
+///得分
 @JsonSerializable()
 class Score {
   double distance;
@@ -25,7 +25,7 @@ class Score {
 
   String toText() => 'Scored ${distance.toStringAsFixed(2)} meters earning $coins coins.';
 }
-
+///统计
 @JsonSerializable()
 class Stats {
   static const MAX_SCORES = 10;

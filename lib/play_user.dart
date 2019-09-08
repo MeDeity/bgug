@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:play_games/play_games.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+///google 账号登录
 class PlayUser {
   Account account;
   Image avatar;

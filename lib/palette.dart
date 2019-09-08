@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flame/palette.dart';
-
+///预定义的调色板
 class Palette {
   static PaletteEntry white = BasicPalette.white;
 

@@ -4,7 +4,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_annotation/json_annotation.dart';
 
 part 'skin_list.g.dart';
-
+///皮肤
 @JsonSerializable()
 class Skin {
   final String name;
@@ -17,7 +17,7 @@ class Skin {
 
   Map<String, dynamic> toJson() => _$SkinToJson(this);
 }
-
+///皮肤列表
 @JsonSerializable()
 class SkinList {
   final List<Skin> skins;

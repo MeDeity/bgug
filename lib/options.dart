@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 
 part 'options.g.dart';
-
+///系统配置项
 @JsonSerializable()
 class Options {
-  double bulletSpeed;
+  double bulletSpeed;///子弹的速度
 
   int buttonCost;
   int buttonIncCost;
@@ -18,7 +18,7 @@ class Options {
   double jumpTimeMultiplier;
 
   int mapSize;
-  bool hasGuns;
+  bool hasGuns;///是否有枪
 
   bool get hasLimit => mapSize != -1;
 
